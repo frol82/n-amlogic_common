@@ -1,0 +1,9 @@
+#ifdef CONFIG_AML_HDMI_GPIO
+    hdmi-gpio_dev{
+		compatible = "amlogic,hdmi-gpio_dev";
+		status = "okay";
+                data_pin_1 = <&gpio_ao  GPIOAO_2  GPIO_ACTIVE_HIGH>;
+                data_pin_2 = <&gpio_ao  GPIOAO_4  GPIO_ACTIVE_HIGH>;
+	};
+#endif
+

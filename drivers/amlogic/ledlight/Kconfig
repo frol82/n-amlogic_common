@@ -1,0 +1,10 @@
+#support amlogic external module power control
+
+menuconfig AMLOGIC_LEDLIGHT
+	tristate "Amlogic Led Light"
+	default n
+	help
+	  Amlogic Led Light
+
+
+

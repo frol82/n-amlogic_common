@@ -1,0 +1,40 @@
+
+#ifdef CONFIG_AMLOGIC_LEDLIGHT
+ledlight{
+    compatible = "amlogic, ledlight";
+    dev_name = "ledlight";
+    status = "okay";
+    power_gpio_0 = <&power_gpio_0>;
+    power_gpio_1 = <&power_gpio_1>;
+    net_gpio_0 = <&net_gpio_0>;
+    net_gpio_1 = <&net_gpio_1>;
+
+   power_gpio_0: gpio_r{
+        led_name = "power_led";
+        led_gpio = <&gpio  GPIOX_3  GPIO_ACTIVE_HIGH>;
+       led_active = <1>;
+        led_type = "R";
+    };
+
+    power_gpio_1: gpio_g{
+        led_name = "power_led";
+        led_gpio = <&gpio  GPIOX_2  GPIO_ACTIVE_HIGH>;
+        led_active = <1>;
+        led_type = "G";
+    };
+
+    net_gpio_0: gpio_r{
+        led_name = "net_led";
+        led_gpio = <&gpio  GPIOX_5  GPIO_ACTIVE_HIGH>;
+        led_active = <1>;
+        led_type = "R";
+    };
+
+    net_gpio_1: gpio_g{
+        led_name = "net_led";
+        led_gpio = <&gpio  GPIOX_4  GPIO_ACTIVE_HIGH>;
+        led_active = <1>;
+        led_type = "G";
+    };
+};
+#endif
